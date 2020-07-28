@@ -35,4 +35,17 @@ ext{
     // Networking
     retrofit_version = '2.6.1'
     okhttp_version = '4.0.1'
+
+    // Parser
+    gson_version = '2.8.5'
+
+    //Glide
+    glide_version = '4.7.1'
+
+    // Reactive
+    rxjava_version = '2.2.3'
+    rxandroid_version = '2.1.0'
+
+    // Lifecycle
+    lifecycle_version = '2.0.0'
 }

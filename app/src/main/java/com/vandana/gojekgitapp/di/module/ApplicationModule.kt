@@ -7,8 +7,11 @@ import com.vandana.gojekgitapp.GoJekApplication
 import com.vandana.gojekgitapp.data.remote.NetworkService
 import com.vandana.gojekgitapp.data.remote.Networking
 import com.vandana.gojekgitapp.di.ApplicationContext
+import com.vandana.gojekgitapp.utils.network.NetworkHelper
+import com.vandana.gojekgitapp.utils.network.NetworkHelperImp
 import dagger.Module
 import dagger.Provides
+import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Singleton
 
 
@@ -24,6 +27,9 @@ class ApplicationModule(private val application: GoJekApplication) {
     @ApplicationContext
     fun provideContext(): Context = application
 
+    @Provides
+    fun provideCompositeDisposable(): CompositeDisposable = CompositeDisposable()
+
 
     @Provides
     @Singleton
@@ -33,5 +39,9 @@ class ApplicationModule(private val application: GoJekApplication) {
             application.cacheDir,
             10 * 1024 * 1024 // 10MB
         )
+
+    @Provides
+    @Singleton
+    fun provideNetworkHelper(): NetworkHelper = NetworkHelperImp(application)
 
 }
