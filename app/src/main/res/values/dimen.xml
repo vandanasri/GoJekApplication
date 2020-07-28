@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_size_56">56dp</dimen>
+    <dimen name="toolbar_heading_margin_14">14dp</dimen>
+    
+    <dimen name="menu_icon_size_24">24dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+
+    <dimen name="circularImage_size_32">32dp</dimen>
+
+    <dimen name="shimmer_topText_width_100">100dp</dimen>
+    <dimen name="shimmer_bottomText_width_260">260dp</dimen>
+    <dimen name="shimmer_item_marginRight_36">36dp</dimen>
+    <dimen name="shimmer_item_marginTop_bottom_21">21dp</dimen>
+
+    <dimen name="rv_item_divider_1">1dp</dimen>
+    <dimen name="rv_item_margin_between_text_6">6dp</dimen>
+    <dimen name="rv_expand_margin_top_8">8dp</dimen>
+    <dimen name="rv_expand_margin_Bottom_8">8dp</dimen>
+    <dimen name="rv_expand_icon_size_16">16dp</dimen>
+    <dimen name="rv_margin_between_icons_4">4dp</dimen>
+
+    <dimen name="retry_btn_height_48">48dp</dimen>
+
+    <dimen name="toolbar_heading_text_21">21sp</dimen>
+    <dimen name="rv_item_topText_12">12sp</dimen>
+    <dimen name="rv_item_bottomText_15">15sp</dimen>
+    <dimen name="rv_expand_text_12">12sp</dimen>
+    <dimen name="retry_text_15">15sp</dimen>
+
+</resources>

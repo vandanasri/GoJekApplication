@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:paddingBottom="@dimen/shimmer_item_marginTop_bottom_21">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rvImageCardView"
+        style="@style/circular_image_style"
+        app:cardCornerRadius="50dp"
+        android:layout_marginTop="@dimen/margin_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/rvTextRepository">
+
+        <ImageView
+            android:id="@+id/rvImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorFill"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTextName"
+            style="@style/rv_text_name_style"
+            android:background="@android:color/transparent"
+            android:text="Heello"
+            app:layout_constraintStart_toEndOf="@+id/rvImageCardView"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rvTextRepository"
+            style="@style/rv_text_repository_style"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toEndOf="@+id/rvImageCardView"
+            app:layout_constraintTop_toBottomOf="@+id/tvTextName"
+            android:text="Repository"
+            />
+
+
+        <include layout="@layout/item_rv_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/rvTextRepository"
+            app:layout_constraintStart_toStartOf="@+id/rvTextRepository"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

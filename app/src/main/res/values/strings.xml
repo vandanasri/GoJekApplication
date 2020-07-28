@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GojekGitApp</string>
+    <string name="trending">Trending</string>
+    <string name="retry">RETRY</string>
+    <string name="something_went_wrong">Something went wrong...</string>
+    <string name="alien_msg">An alien is probably blocking your signal.</string>
 </resources>

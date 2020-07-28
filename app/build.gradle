@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -8,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.vandana.gojekgitapp"
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -33,5 +34,20 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //facebook shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+
+    // CardView
+    implementation "androidx.cardview:cardview:$support_library_version"
+
+    //swipe refresh layout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$support_library_version"
+    // RecyclerView
+    implementation "androidx.recyclerview:recyclerview:$support_library_version"
+
+    // Dependency injection
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 
 }

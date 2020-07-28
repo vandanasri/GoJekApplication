@@ -1,10 +1,107 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+
+    <style name="toolbar_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/toolbar_size_56</item>
+    </style>
+
+
+    <style name="heading_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorToolbarHeading</item>
+        <item name="android:textSize">@dimen/toolbar_heading_text_21</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:layout_marginTop">@dimen/toolbar_heading_margin_14</item>
+        <item name="android:layout_marginBottom">@dimen/toolbar_heading_margin_14</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:text">@string/trending</item>
+    </style>
+
+    <style name="fragment_container_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+
+    </style>
+
+    <style name="circular_image_style">
+        <item name="android:layout_width">@dimen/circularImage_size_32</item>
+        <item name="android:layout_height">@dimen/circularImage_size_32</item>
+        <item name="android:layout_marginLeft">@dimen/margin_16</item>
+    </style>
+
+    <style name="shimmer_text_container_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">@dimen/shimmer_item_marginTop_bottom_21</item>
+        <item name="android:paddingTop">@dimen/shimmer_item_marginTop_bottom_21</item>
+        <item name="android:paddingRight">@dimen/shimmer_item_marginRight_36</item>
+        <item name="android:layout_marginLeft">@dimen/margin_16</item>
+    </style>
+
+    <style name="shimmer_textTop_style">
+        <item name="android:layout_width">@dimen/shimmer_topText_width_100</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginTop">@dimen/shimmer_item_marginTop_bottom_21</item>
+        <item name="android:layout_marginStart">@dimen/margin_16</item>
+        <item name="android:background">@drawable/custom_circle</item>
+
+    </style>
+
+    <style name="shimmer_textBottom_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/margin_16</item>
+        <item name="android:layout_marginStart">@dimen/margin_16</item>
+        <item name="android:background">@drawable/custom_circle</item>
+    </style>
+
+    <style name="rv_text_container_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+
+
+    <style name="rv_text_name_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textSize">@dimen/rv_item_topText_12</item>
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/colorRvText</item>
+        <item name="android:layout_marginTop">@dimen/margin_16</item>
+        <item name="android:layout_marginStart">@dimen/margin_16</item>
+
+    </style>
+
+
+    <style name="rv_text_repository_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginTop">@dimen/rv_item_margin_between_text_6</item>
+        <item name="android:layout_marginStart">@dimen/margin_16</item>
+        <item name="android:textSize">@dimen/rv_item_bottomText_15</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorRvText</item>
+    </style>
+
+    <style name="rv_item_expand_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginTop">@dimen/rv_expand_margin_top_8</item>
+        <item name="android:textSize">@dimen/rv_expand_text_12</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textColor">@color/colorRvText</item>
+    </style>
+
 
 </resources>
