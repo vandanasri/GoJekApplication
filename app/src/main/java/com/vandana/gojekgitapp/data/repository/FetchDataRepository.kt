@@ -13,6 +13,6 @@ class FetchDataRepository @Inject constructor(
 ) {
 
     //fetching data from network service api
-    fun fetchTrendingRepositoryData(language: String, since: String) : Single<List<TrendingRepositoryData>> =
+    fun getTrendingRepositoryData(language: String, since: String) : Single<List<TrendingRepositoryData>> =
         networkService.fetchTrendingGitRepoData(language, since)
 }

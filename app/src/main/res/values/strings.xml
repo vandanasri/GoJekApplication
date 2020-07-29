@@ -12,4 +12,6 @@
     </string>
     <string name="server_connection_error">Not able to connect, please retry again</string>
     <string name="label_something_went_wrong">Something went wrong at our end!</string>
+    <string name="sort_by_stars">Sort by stars</string>
+    <string name="sort_by_name">Sort by name</string>
 </resources>

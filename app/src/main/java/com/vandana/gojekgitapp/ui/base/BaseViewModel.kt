@@ -10,7 +10,7 @@ import javax.net.ssl.HttpsURLConnection
 
 
 abstract class BaseViewModel (
-    private val compositeDisposable: CompositeDisposable,
+    val compositeDisposable: CompositeDisposable,
     private val networkHelper: NetworkHelper
 ): ViewModel(){
 

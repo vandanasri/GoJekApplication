@@ -7,38 +7,53 @@ import com.google.gson.annotations.SerializedName
 
 data class TrendingRepositoryData (
 
-    @SerializedName("username")
+    @SerializedName("author")
     @Expose
-    var username: String? = null,
+    var  author : String? = null,
     @SerializedName("name")
     @Expose
     var name: String? = null,
-
-    @SerializedName("url")
-    @Expose
-    var url: String? = null,
     @SerializedName("avatar")
     @Expose
-    var avatar: String? = null,
-    @SerializedName("repo")
+    var avatar:String? = null,
+    @SerializedName("url")
     @Expose
-    var repo: Repo? = null,
-
-    @SerializedName("sponsorUrl")
+    var url:String? = null,
+    @SerializedName("description")
     @Expose
-    var  sponsorUrl:String? =null
+    var description: String? = null,
+    @SerializedName("language")
+    @Expose
+    var language :String? = null,
+    @SerializedName("languageColor")
+    @Expose
+    var languageColor :String? = null,
+    @SerializedName("stars")
+    @Expose
+    var  stars :Int = 0,
+    @SerializedName("forks")
+    @Expose
+    var forks: Int =0,
+    @SerializedName("currentPeriodStars")
+    @Expose
+    var currentPeriodStars : Int =0,
+    @SerializedName("builtBy")
+    @Expose
+    var builtBy : List<BuiltBy>? = null
 )
 {
-    inner class Repo {
-        @SerializedName("name")
+    inner class BuiltBy {
+        @SerializedName("href")
         @Expose
-        var name: String? = null
-        @SerializedName("description")
+        private var href: String? = null
+
+        @SerializedName("avatar")
         @Expose
-        var description: String? = null
-        @SerializedName("url")
+        private var avatar: String? = null
+
+        @SerializedName("username")
         @Expose
-        var url: String? = null
+        private var username: String? = null
 
     }
 }
