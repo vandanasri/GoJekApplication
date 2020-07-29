@@ -8,6 +8,7 @@ import com.vandana.gojekgitapp.data.repository.FetchDataRepository
 import com.vandana.gojekgitapp.di.ApplicationContext
 import com.vandana.gojekgitapp.di.module.ApplicationModule
 import com.vandana.gojekgitapp.utils.network.NetworkHelper
+import com.vandana.gojekgitapp.utils.rx.SchedulerProvider
 import dagger.Component
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Singleton
@@ -31,7 +32,4 @@ interface ApplicationComponent {
     fun getCompositeDisposable() : CompositeDisposable
 
     fun getNetworkHelper(): NetworkHelper
-
-
-
 }

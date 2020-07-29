@@ -8,12 +8,13 @@ import com.vandana.gojekgitapp.ui.base.BaseViewModel
 import com.vandana.gojekgitapp.utils.common.Resource
 import com.vandana.gojekgitapp.utils.common.Status
 import com.vandana.gojekgitapp.utils.network.NetworkHelper
+import com.vandana.gojekgitapp.utils.rx.SchedulerProvider
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
 @FragmentScope
-class TrendingRepositoryViewModel(compositeDisposable: CompositeDisposable, networkHelper: NetworkHelper,
-    private val fetchDataRepository: FetchDataRepository
+class TrendingRepositoryViewModel( compositeDisposable: CompositeDisposable, networkHelper: NetworkHelper,
+                                  private val fetchDataRepository: FetchDataRepository
 )
     : BaseViewModel(compositeDisposable,networkHelper)  {
 
@@ -21,17 +22,13 @@ class TrendingRepositoryViewModel(compositeDisposable: CompositeDisposable, netw
 
     val trendingRepositoryLiveData : MutableLiveData<List<TrendingRepositoryData>> = MutableLiveData()
 
-    var language : String = "kotlin"
-    var since : String = "Weekly"
 
     fun callTrendingRepositoryAPI(){
-        val paramMap = HashMap<String, String>()
-        paramMap["language"] = language
-        paramMap["since"] = since
-        if (checkInternetConnectionWithMessage()) {
+
+        //if (checkInternetConnectionWithMessage()) {
             isLoading.postValue(Resource.loading())
             compositeDisposable.add(
-                fetchDataRepository.getTrendingRepositoryData(language,since)
+                fetchDataRepository.getTrendingRepositoryData("kotlin","weekly")
                     .subscribeOn(Schedulers.io())
                     .subscribe(
                         {
@@ -43,7 +40,7 @@ class TrendingRepositoryViewModel(compositeDisposable: CompositeDisposable, netw
                             handleNetworkError(it)
                         })
             )
-        }
+       // }
     }
 
 

@@ -7,6 +7,7 @@ import com.vandana.gojekgitapp.ui.base.BaseFragment
 import com.vandana.gojekgitapp.ui.trendingRepoFragment.TrendingRepositoryViewModel
 import com.vandana.gojekgitapp.utils.ViewModelProviderFactory
 import com.vandana.gojekgitapp.utils.network.NetworkHelper
+import com.vandana.gojekgitapp.utils.rx.SchedulerProvider
 import dagger.Module
 import dagger.Provides
 import io.reactivex.disposables.CompositeDisposable
@@ -18,7 +19,7 @@ class FragmentModule(private val fragment: BaseFragment<*>) {
     fun provideLinearLayoutManager(): LinearLayoutManager = LinearLayoutManager(fragment.context)
 
     @Provides
-    fun providesTrendingRepositoryViewModel(compositeDisposable: CompositeDisposable,
+    fun providesTrendingRepositoryViewModel( compositeDisposable: CompositeDisposable,
                                             networkHelper: NetworkHelper,
                                             fetchDataRepository: FetchDataRepository
 

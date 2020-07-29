@@ -8,6 +8,7 @@ import com.vandana.gojekgitapp.ui.base.BaseActivity
 import com.vandana.gojekgitapp.ui.main.MainViewModel
 import com.vandana.gojekgitapp.utils.ViewModelProviderFactory
 import com.vandana.gojekgitapp.utils.network.NetworkHelper
+import com.vandana.gojekgitapp.utils.rx.SchedulerProvider
 import dagger.Module
 import dagger.Provides
 import io.reactivex.disposables.CompositeDisposable

@@ -5,13 +5,14 @@ import androidx.lifecycle.ViewModel
 import com.vandana.gojekgitapp.R
 import com.vandana.gojekgitapp.utils.common.Resource
 import com.vandana.gojekgitapp.utils.network.NetworkHelper
+import com.vandana.gojekgitapp.utils.rx.SchedulerProvider
 import io.reactivex.disposables.CompositeDisposable
 import javax.net.ssl.HttpsURLConnection
 
 
 abstract class BaseViewModel (
-    val compositeDisposable: CompositeDisposable,
-    private val networkHelper: NetworkHelper
+    protected val compositeDisposable: CompositeDisposable,
+    protected val networkHelper: NetworkHelper
 ): ViewModel(){
 
 

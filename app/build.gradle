@@ -29,6 +29,15 @@ android {
             buildConfigField("String", "BASE_URL", "\"https://ghapi.huchen.dev\"")
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
 }
 
 dependencies {
@@ -75,5 +84,15 @@ dependencies {
 
     // ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    //test
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    kaptTest "com.google.dagger:dagger-compiler:$dagger_version"
+    testImplementation "android.arch.core:core-testing:$core_testing_version"
+    testImplementation "org.hamcrest:hamcrest-library:$hamcrest_version"
+
+
+
+
 
 }

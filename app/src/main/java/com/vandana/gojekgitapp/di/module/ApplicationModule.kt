@@ -9,6 +9,8 @@ import com.vandana.gojekgitapp.data.remote.Networking
 import com.vandana.gojekgitapp.di.ApplicationContext
 import com.vandana.gojekgitapp.utils.network.NetworkHelper
 import com.vandana.gojekgitapp.utils.network.NetworkHelperImp
+import com.vandana.gojekgitapp.utils.rx.RxSchedulerProvider
+import com.vandana.gojekgitapp.utils.rx.SchedulerProvider
 import dagger.Module
 import dagger.Provides
 import io.reactivex.disposables.CompositeDisposable
@@ -31,13 +33,15 @@ class ApplicationModule(private val application: GoJekApplication) {
     fun provideCompositeDisposable(): CompositeDisposable = CompositeDisposable()
 
 
+
     @Provides
     @Singleton
     fun provideNetworkService(): NetworkService =
         Networking.create(
             BuildConfig.BASE_URL,
             application.cacheDir,
-            10 * 1024 * 1024 // 10MB
+            50 * 1024 * 1024, // 10MB
+        provideNetworkHelper()
         )
 
     @Provides

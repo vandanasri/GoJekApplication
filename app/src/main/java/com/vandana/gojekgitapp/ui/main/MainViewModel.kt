@@ -3,6 +3,7 @@ package com.vandana.gojekgitapp.ui.main
 import com.vandana.gojekgitapp.di.ActivityScope
 import com.vandana.gojekgitapp.ui.base.BaseViewModel
 import com.vandana.gojekgitapp.utils.network.NetworkHelper
+import com.vandana.gojekgitapp.utils.rx.SchedulerProvider
 import io.reactivex.disposables.CompositeDisposable
 
 @ActivityScope
