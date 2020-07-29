@@ -146,7 +146,7 @@ class TrendingRepositoryFragment : BaseFragment<TrendingRepositoryViewModel>() ,
         }
     }
 
-   
+
     override fun onRefresh() {
         swipeContainer.isRefreshing = true
         viewModel.callTrendingRepositoryAPI()
