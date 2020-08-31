@@ -16,6 +16,8 @@ import okhttp3.internal.notifyAll
 class TrendingRepositoryAdapter (private var trendingRepositoryDataList: List<TrendingRepositoryData>) :
     RecyclerView.Adapter<TrendingRepositoryAdapter.ViewHolder>() {
 
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_recyclerview, parent, false)
         return ViewHolder(parent.context, view)
